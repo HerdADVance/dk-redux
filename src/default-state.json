@@ -1,0 +1,83 @@
+{
+  "id": "1",
+  "title": "DFS NCAAF Optimizer",
+  "sport": "NCAAF",
+  "type": "Classic",
+  "players": [
+    {
+      "Position": "QB",
+      "Name": "Malcolm Perry",
+      "ID": 14039251,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 8900,
+      "Game Info": "NAVY@KSU 12/31/2019 03:45PM ET",
+      "TeamAbbrev": "NAVY",
+      "AvgPointsPerGame": 32.96
+    },
+    {
+      "Position": "RB",
+      "Name": "Zack Moss",
+      "ID": 14039253,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 8700,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UTAH",
+      "AvgPointsPerGame": 27.02
+    }
+  ],
+  "lineups": [
+    {
+      "id": 1,
+      "salary": 50000,
+      "slots": [
+        {
+          "position": "QB",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "RB",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "RB",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "WR",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "WR",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "WR",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "FX",
+          "clicked": false,
+          "player": false
+        },
+        {
+          "position": "SF",
+          "clicked": false,
+          "player": false
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Alex Vance",
+      "email": "vance@ballsoherd.com"
+    }
+  ]
+}

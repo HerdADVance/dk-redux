@@ -5,17 +5,17 @@ import { render } from "react-dom";
 import PlayerSelectWindow from './PlayerSelectWindow'
 import LineupsWindow from './LineupsWindow'
 
-const App = () => {
+const Application = () => {
   
   //const themeHook = useState("dodgerblue")
 
   return (
-    <div className="wrapper">
+    <main className="application">
     	<PlayerSelectWindow />
     	<LineupsWindow />
-    </div>
+    </main>
   );
 
 };
 
-render(<App />, document.getElementById("root"));
+export default Application;

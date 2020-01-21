@@ -1,7 +1,6 @@
 // REACT STUFF
 import React, {useState, useEffect} from "react";
 import { render } from "react-dom";
-import "babel-polyfill";
 
 // OTHER MODULES
 import PlayersShown from './PlayersShown'
