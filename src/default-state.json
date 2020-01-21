@@ -1,11 +1,11 @@
 {
-  "id": "1",
-  "title": "DFS NCAAF Optimizer",
-  "sport": "NCAAF",
-  "type": "Classic",
+  "id": 1,
+  "type": "CFB",
+  "date": "12-31-19",
   "players": [
     {
       "Position": "QB",
+      "Name + ID": "Malcolm Perry (14039251)",
       "Name": "Malcolm Perry",
       "ID": 14039251,
       "Roster Position": "QB/S-FLEX",
@@ -16,6 +16,7 @@
     },
     {
       "Position": "RB",
+      "Name + ID": "Zack Moss (14039253)",
       "Name": "Zack Moss",
       "ID": 14039253,
       "Roster Position": "RB/FLEX/S-FLEX",
@@ -23,61 +24,456 @@
       "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
       "TeamAbbrev": "UTAH",
       "AvgPointsPerGame": 27.02
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Sam Ehlinger (14039256)",
+      "Name": "Sam Ehlinger",
+      "ID": 14039256,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 8500,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 29.69
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Devin Duvernay (14039258)",
+      "Name": "Devin Duvernay",
+      "ID": 14039258,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 8100,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 26.08
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Tyler Huntley (14039261)",
+      "Name": "Tyler Huntley",
+      "ID": 14039261,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 7700,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UTAH",
+      "AvgPointsPerGame": 19.18
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Dan Ellington (14039263)",
+      "Name": "Dan Ellington",
+      "ID": 14039263,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 7500,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 22.29
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Jayden Daniels (14039265)",
+      "Name": "Jayden Daniels",
+      "ID": 14039265,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 7200,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "ASU",
+      "AvgPointsPerGame": 22.26
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Tra Barnett (14039267)",
+      "Name": "Tra Barnett",
+      "ID": 14039267,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 7000,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 20.96
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Skylar Thompson (14039270)",
+      "Name": "Skylar Thompson",
+      "ID": 14039270,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 6800,
+      "Game Info": "NAVY@KSU 12/31/2019 03:45PM ET",
+      "TeamAbbrev": "KSU",
+      "AvgPointsPerGame": 19.32
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "James Blackman (14039272)",
+      "Name": "James Blackman",
+      "ID": 14039272,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 6700,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "FSU",
+      "AvgPointsPerGame": 14.24
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Tamorrion Terry (14039274)",
+      "Name": "Tamorrion Terry",
+      "ID": 14039274,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 6600,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "FSU",
+      "AvgPointsPerGame": 17.2
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Keaontay Ingram (14039277)",
+      "Name": "Keaontay Ingram",
+      "ID": 14039277,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 6300,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 15.01
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Levi Williams (14039280)",
+      "Name": "Levi Williams",
+      "ID": 14039280,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 6200,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "WYO",
+      "AvgPointsPerGame": 10.58
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Collin Johnson (14039282)",
+      "Name": "Collin Johnson",
+      "ID": 14039282,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 6100,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 16.95
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Xazavian Valladay (14039285)",
+      "Name": "Xazavian Valladay",
+      "ID": 14039285,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 6000,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "WYO",
+      "AvgPointsPerGame": 16.37
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Jamale Carothers (14039288)",
+      "Name": "Jamale Carothers",
+      "ID": 14039288,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5900,
+      "Game Info": "NAVY@KSU 12/31/2019 03:45PM ET",
+      "TeamAbbrev": "NAVY",
+      "AvgPointsPerGame": 23.46
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Frank Darby (14039291)",
+      "Name": "Frank Darby",
+      "ID": 14039291,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 5600,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "ASU",
+      "AvgPointsPerGame": 12.88
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Nick Szpor (14039294)",
+      "Name": "Nick Szpor",
+      "ID": 14039294,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 5500,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "WYO",
+      "AvgPointsPerGame": 0
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Roschon Johnson (14039299)",
+      "Name": "Roschon Johnson",
+      "ID": 14039299,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5400,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 12.9
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Cornelius McCoy (14039296)",
+      "Name": "Cornelius McCoy",
+      "ID": 14039296,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 5400,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 13.52
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Casey Thompson (14039302)",
+      "Name": "Casey Thompson",
+      "ID": 14039302,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 5300,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 3.62
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "James Gilbert (14039304)",
+      "Name": "James Gilbert",
+      "ID": 14039304,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5300,
+      "Game Info": "NAVY@KSU 12/31/2019 03:45PM ET",
+      "TeamAbbrev": "KSU",
+      "AvgPointsPerGame": 12.47
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Destin Coates (14039307)",
+      "Name": "Destin Coates",
+      "ID": 14039307,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5300,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 11.63
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Seth Paige (14039310)",
+      "Name": "Seth Paige",
+      "ID": 14039310,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5300,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 10.07
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Sam Pinckney (14039313)",
+      "Name": "Sam Pinckney",
+      "ID": 14039313,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 5200,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 12.78
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Brennan Eagles (14039316)",
+      "Name": "Brennan Eagles",
+      "ID": 14039316,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 5100,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UT",
+      "AvgPointsPerGame": 10.98
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Brant Kuithe (14039319)",
+      "Name": "Brant Kuithe",
+      "ID": 14039319,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 5100,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UTAH",
+      "AvgPointsPerGame": 11.73
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Cam Akers (14039322)",
+      "Name": "Cam Akers",
+      "ID": 14039322,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5000,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "FSU",
+      "AvgPointsPerGame": 26.72
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Eno Benjamin (14039325)",
+      "Name": "Eno Benjamin",
+      "ID": 14039325,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 5000,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "ASU",
+      "AvgPointsPerGame": 22.75
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Dalen Morris (14039328)",
+      "Name": "Dalen Morris",
+      "ID": 14039328,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 5000,
+      "Game Info": "NAVY@KSU 12/31/2019 03:45PM ET",
+      "TeamAbbrev": "NAVY",
+      "AvgPointsPerGame": 0.8
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Cornelious Brown (14039330)",
+      "Name": "Cornelious Brown",
+      "ID": 14039330,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 5000,
+      "Game Info": "GAST@WYO 12/31/2019 04:30PM ET",
+      "TeamAbbrev": "GAST",
+      "AvgPointsPerGame": 1.9
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Jason Shelley (14039332)",
+      "Name": "Jason Shelley",
+      "ID": 14039332,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 4900,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UTAH",
+      "AvgPointsPerGame": 1.85
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "Bryan Thompson (14039334)",
+      "Name": "Bryan Thompson",
+      "ID": 14039334,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 4900,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UTAH",
+      "AvgPointsPerGame": 10.78
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Jordan Travis (14039337)",
+      "Name": "Jordan Travis",
+      "ID": 14039337,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 4900,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "FSU",
+      "AvgPointsPerGame": 12.69
+    },
+    {
+      "Position": "WR",
+      "Name + ID": "D.J. Matthews (14039339)",
+      "Name": "D.J. Matthews",
+      "ID": 14039339,
+      "Roster Position": "WR/FLEX/S-FLEX",
+      "Salary": 4900,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "FSU",
+      "AvgPointsPerGame": 8.39
+    },
+    {
+      "Position": "QB",
+      "Name + ID": "Ethan Long (14039342)",
+      "Name": "Ethan Long",
+      "ID": 14039342,
+      "Roster Position": "QB/S-FLEX",
+      "Salary": 4900,
+      "Game Info": "FSU@ASU 12/31/2019 02:00PM ET",
+      "TeamAbbrev": "ASU",
+      "AvgPointsPerGame": 1.07
+    },
+    {
+      "Position": "RB",
+      "Name + ID": "Devonta'e Henry-Cole (14039344)",
+      "Name": "Devonta'e Henry-Cole",
+      "ID": 14039344,
+      "Roster Position": "RB/FLEX/S-FLEX",
+      "Salary": 4800,
+      "Game Info": "UTAH@UT 12/31/2019 07:30PM ET",
+      "TeamAbbrev": "UTAH",
+      "AvgPointsPerGame": 5.22
     }
   ],
   "lineups": [
     {
       "id": 1,
       "salary": 50000,
-      "slots": [
-        {
-          "position": "QB",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "RB",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "RB",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "WR",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "WR",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "WR",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "FX",
-          "clicked": false,
-          "player": false
-        },
-        {
-          "position": "SF",
-          "clicked": false,
-          "player": false
-        }
-      ]
-    }
+      "slots": [1,2,3,4,5,6,7,8]
+    } 
   ],
-  "users": [
+  "slots": [
     {
-      "id": "1",
-      "name": "Alex Vance",
-      "email": "vance@ballsoherd.com"
+      "id": 1,
+      "position": "QB",
+      "accepts": ["QB"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 2,
+      "position": "RB",
+      "accepts": ["RB"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 3,
+      "position": "RB",
+      "accepts": ["RB"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 4,
+      "position": "WR",
+      "accepts": ["WR"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 5,
+      "position": "WR",
+      "accepts": ["WR"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 6,
+      "position": "WR",
+      "accepts": ["WR"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 7,
+      "position": "FX",
+      "accepts": ["FLEX"],
+      "clicked": false,
+      "player": 1
+    },
+    {
+      "id": 8,
+      "position": "SF",
+      "accepts": ["S-FLEX"],
+      "clicked": false,
+      "player": 1
     }
   ]
 }

@@ -1,55 +1,28 @@
-import { schema, normalize } from 'normalizr';
 import defaultState from './default-state';
 
-const lineup = new schema.Entity('lineup');
-const player = new schema.Entity('players');
-
-const normalizedLineups = normalize(defaultState.lineups, [lineup]);
-const normalizedPlayers = normalize(defaultState.players, [player]);
+let playerIds = [];
+for(var i = 0; i < defaultState.players.length; i++){
+	playerIds.push(defaultState.players[i].ID);
+}
 
 export const lineups = {
-  entities: normalizedLineups.entities.lineups,
-  ids: normalizedLineups.result
-}
+  entities: defaultState.lineups,
+  ids: [1]
+};
 
 export const players = {
-  entities: normalizedPlayers.entities.players,
-  ids: normalizedPlayers.result
-}
+  entities: defaultState.players,
+  ids: playerIds
+};
+
+export const slots = {
+  entities: defaultState.slots,
+  ids: [1,2,3,4,5,6,7,8]
+};
 
 export default{
   lineups,
-  players
+  players,
+  slots
 };
 
-
-
-// const user = new schema.Entity('users');
-// const card = new schema.Entity('cards', { assignedTo: user });
-// const list = new schema.Entity('lists', {
-//   cards: [card],
-// });
-
-// const normalizedLists = normalize(defaultState.lists, [list]);
-// const normalizedUsers = normalize(defaultState.users, [user]);
-
-// export const lists = {
-//   entities: normalizedLists.entities.lists,
-//   ids: normalizedLists.result,
-// };
-
-// export const users = {
-//   entities: normalizedUsers.entities.users,
-//   ids: normalizedUsers.result,
-// };
-
-// export const cards = {
-//   entities: normalizedLists.entities.cards,
-//   ids: Object.keys(normalizedLists.entities.cards),
-// };
-
-// export default {
-//   users,
-//   lists,
-//   cards,
-// };
