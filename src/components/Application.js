@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { render } from "react-dom";
 //import { Router, Link } from "@reach/router"
 
-import PlayersContainer from './../containers/PlayersContainer'
-//import LineupsWindow from './LineupsWindow'
+import PlayersContainer from './../containers/PlayersContainer';
+import LineupsContainer from './../containers/LineupsContainer';
 
 const Application = () => {
   
@@ -12,6 +12,7 @@ const Application = () => {
   return (
     <main className="application">
     	<PlayersContainer />
+    	<LineupsContainer />
     </main>
   );
 

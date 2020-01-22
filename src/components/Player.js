@@ -22,9 +22,13 @@ import React from 'react';
 const Player = ({ player = {} }) => {
 
   return (
-    <article className="Player">
-      <h2>Hey, {player.Name}</h2>
-    </article>
+  	<tr className="player">
+    	<td className="position">{player.Position}</td>
+     	<td className="name">{player.Name}</td>
+     	<td className="team">{player.TeamAbbrev}</td>
+     	<td className="team">{player.Salary}</td>
+     	<td className="team">---</td>
+    </tr>
   );
 };
 

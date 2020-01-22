@@ -9,6 +9,13 @@ export const players = {
   ids: normalizedPlayers.result,
 };
 
+const lineup = new schema.Entity('lineups');
+const normalizedLineups = normalize(defaultState.lineups, [lineup]);
+export const lineups = {
+  entities: normalizedLineups.entities.lineups,
+  ids: normalizedLineups.result,
+};
+
 // let playerIds = [];
 // for(var i = 0; i < defaultState.players.length; i++){
 // 	playerIds.push(defaultState.players[i].ID);
@@ -30,6 +37,7 @@ export const players = {
 // };
 
 export default{
-  players
+  players,
+  lineups
 };
 
