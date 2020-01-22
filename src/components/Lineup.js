@@ -8,9 +8,16 @@ import SlotsContainer from '../containers/SlotsContainer';
 const Lineup = ({ lineup = {} }) => {
 
   return (
-  	<div>
-  		<h2>{lineup.id}</h2>
-  	</div>
+  	<table className="lineup">
+  		<tbody>
+  			<tr>
+  				<td colspan="4">Lineup #1</td>
+  			</tr>
+			{lineup.slots.map(slotId => (
+				<SlotsContainer key={slotId} slotId={slotId} lineupId={lineup.id} />
+			))}
+  		</tbody>
+  	</table>
   );
 };
 

@@ -1,13 +1,15 @@
 import React from 'react';
 //import MoveSlotToListContainer from '../containers/MoveSlotToListContainer';
 
-const Slot = ({ slot = {}, listId, removeSlot }) => {
+const Slot = ({ slot = {}, lineupId }) => { // pass removeSlot here later
   return (
-    <article className="Slot">
-      <h3>{slot.title}</h3>
-      <div className="Slot-description">{slot.description}</div>
+    <tr data-pos={slot.position}>
+      <td>{slot.player}</td>
+      <td></td>
+      <td></td>
+      <td></td>
       {/*MoveSlotToListContainer slotId={slot.id} listId={listId} />*/}
-    </article>
+    </tr>
   );
 };
 

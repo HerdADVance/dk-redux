@@ -3,18 +3,29 @@ import defaultState from './default-state';
 
 
 const player = new schema.Entity('players');
+const slot = new schema.Entity('slots');
+const lineup = new schema.Entity('lineups', {
+	slots: [slot]
+});
+
 const normalizedPlayers = normalize(defaultState.players, [player]);
+const normalizedLineups = normalize(defaultState.lineups, [lineup]);
+
+
 export const players = {
   entities: normalizedPlayers.entities.players,
   ids: normalizedPlayers.result,
 };
 
-const lineup = new schema.Entity('lineups');
-const normalizedLineups = normalize(defaultState.lineups, [lineup]);
 export const lineups = {
   entities: normalizedLineups.entities.lineups,
   ids: normalizedLineups.result,
 };
+
+export const slots = {
+	entities: normalizedLineups.entities.slots,
+	ids: Object.keys(normalizedLineups.entities.slots)
+}
 
 // let playerIds = [];
 // for(var i = 0; i < defaultState.players.length; i++){
@@ -38,6 +49,7 @@ export const lineups = {
 
 export default{
   players,
-  lineups
+  lineups,
+  slots
 };
 

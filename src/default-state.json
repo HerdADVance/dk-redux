@@ -415,65 +415,64 @@
     {
       "id": 1,
       "salary": 50000,
-      "slots": [1,2,3,4,5,6,7,8]
+      "slots": [
+        {
+          "id": 1,
+          "position": "QB",
+          "accepts": ["QB"],
+          "clicked": false,
+          "player": 14039251
+        },
+        {
+          "id": 2,
+          "position": "RB",
+          "accepts": ["RB"],
+          "clicked": false,
+          "player": 14039253
+        },
+        {
+          "id": 3,
+          "position": "RB",
+          "accepts": ["RB"],
+          "clicked": false,
+          "player": 14039299
+        },
+        {
+          "id": 4,
+          "position": "WR",
+          "accepts": ["WR"],
+          "clicked": false,
+          "player": 14039258
+        },
+        {
+          "id": 5,
+          "position": "WR",
+          "accepts": ["WR"],
+          "clicked": false,
+          "player": 14039313
+        },
+        {
+          "id": 6,
+          "position": "WR",
+          "accepts": ["WR"],
+          "clicked": false,
+          "player": 14039339
+        },
+        {
+          "id": 7,
+          "position": "FX",
+          "accepts": ["FLEX"],
+          "clicked": false,
+          "player": 14039344
+        },
+        {
+          "id": 8,
+          "position": "SF",
+          "accepts": ["S-FLEX"],
+          "clicked": false,
+          "player": 14039256
+        }
+      ]
     } 
-  ],
-  "slots": [
-    {
-      "id": 1,
-      "position": "QB",
-      "accepts": ["QB"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 2,
-      "position": "RB",
-      "accepts": ["RB"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 3,
-      "position": "RB",
-      "accepts": ["RB"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 4,
-      "position": "WR",
-      "accepts": ["WR"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 5,
-      "position": "WR",
-      "accepts": ["WR"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 6,
-      "position": "WR",
-      "accepts": ["WR"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 7,
-      "position": "FX",
-      "accepts": ["FLEX"],
-      "clicked": false,
-      "player": 1
-    },
-    {
-      "id": 8,
-      "position": "SF",
-      "accepts": ["S-FLEX"],
-      "clicked": false,
-      "player": 1
-    }
   ]
 }
