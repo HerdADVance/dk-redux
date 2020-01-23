@@ -18,9 +18,11 @@ const Players = ({ players = [] }) => {
 
 		<div className="players-wrap">
 			<table className="players">
-				{players.map(playerId => (
-		    		<PlayerContainer key={playerId} playerId={playerId} />
-		  		))}
+				<tbody>
+					{players.map(playerId => (
+		    			<PlayerContainer key={playerId} playerId={playerId} />
+		  			))}
+		  		</tbody>
 		  	</table>
 		</div>
 	</div>

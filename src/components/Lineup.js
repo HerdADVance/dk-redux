@@ -11,7 +11,7 @@ const Lineup = ({ lineup = {} }) => {
   	<table className="lineup">
   		<tbody>
   			<tr>
-  				<td colspan="4">Lineup #1</td>
+  				<td colSpan="4">Lineup #1</td>
   			</tr>
 			{lineup.slots.map(slotId => (
 				<SlotsContainer key={slotId} slotId={slotId} lineupId={lineup.id} />
