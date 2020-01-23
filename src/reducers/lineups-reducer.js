@@ -1,14 +1,16 @@
 import { lineups as defaultLineups } from '../normalized-state';
 
-//import { CARD_CREATE, CARD_DELETE } from '../actions/card-actions';
+import { SLOT_CREATE} from '../actions/slot-actions';
+import { LINEUP_CREATE, LINEUP_DELETE } from '../actions/lineup-actions';
 
-//import { addEntity, removeEntity } from './_utilities';
+import { addEntity, removeEntity } from './_utilities';
 
 const lineupsReducer = (lineups = defaultLineups, action) => {
-  // if (action.type === PLAYER_CREATE) {
-  //   const { player, playerId } = action.payload;
-  //   return addEntity(players, player, playerId);
-  // }
+  
+  if (action.type === LINEUP_CREATE) {
+    const { lineup, lineupid } = action.payload;
+    return addEntity(lineups, lineup, lineupid);
+  }
 
   return lineups;
 };
