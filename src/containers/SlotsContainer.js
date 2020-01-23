@@ -5,6 +5,7 @@ import Slot from '../components/Slot';
 const mapStateToProps = (state, ownProps) => {
   return {
     slot: state.slots.entities[ownProps.slotId],
+    playerrr: "ABC"
   };
 };
 
