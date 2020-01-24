@@ -6,7 +6,7 @@ const Initialization = ({ createSlot, createLineup }) => {
 
   	for(var i=1; i<101; i++){
   		
-  		createSlot()
+  		createLineup()
 
   		for(var j=0; j<8; j++){
   			//createSlot();
