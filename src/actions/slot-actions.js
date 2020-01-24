@@ -10,6 +10,7 @@ const defaultSlotData = {
 };
 
 export const createSlot = (lineupId, slotData) => {
+  console.log("Creating slot")
   const slotId = Date.now().toString();
   const slot = {
     id: slotId,

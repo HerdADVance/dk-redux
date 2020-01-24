@@ -1,7 +1,6 @@
 import { schema, normalize } from 'normalizr';
 import defaultState from './default-state';
 
-
 const player = new schema.Entity('players');
 const slot = new schema.Entity('slots');
 const lineup = new schema.Entity('lineups', {
@@ -27,6 +26,9 @@ export const slots = {
 	ids: Object.keys(normalizedLineups.entities.slots)
 }
 
+export const lineupIdGenerator = defaultState.lineupIdGenerator;
+export const slotIdGenerator = defaultState.slotIdGenerator;
+
 // let playerIds = [];
 // for(var i = 0; i < defaultState.players.length; i++){
 // 	playerIds.push(defaultState.players[i].ID);
@@ -50,6 +52,8 @@ export const slots = {
 export default{
   players,
   lineups,
-  slots
+  slots,
+  lineupIdGenerator,
+  slotIdGenerator
 };
 

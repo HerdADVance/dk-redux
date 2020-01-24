@@ -2,6 +2,8 @@
   "id": 1,
   "type": "CFB",
   "date": "12-31-19",
+  "lineupIdGenerator": 0,
+  "slotIdGenerator": 0,
   "players": [
     {
       "Position": "QB",

@@ -1,14 +1,26 @@
-import React from "react";
+import React, { Component } from "react";
 
-const Initialization = () => {
+const Initialization = ({ createSlot, createLineup }) => {
   
-  //const themeHook = useState("dodgerblue")
+  function handleClick(){
+
+  	for(var i=1; i<101; i++){
+  		
+  		createSlot()
+
+  		for(var j=0; j<8; j++){
+  			//createSlot();
+  		}
+  	}
+  }
+
 
   return (
     <div>
-    	<button onClick={this.handleClick}>Create 100 Lineups</button>
+    	<button onClick={() => handleClick()}>Create 100 Lineups</button>
     </div>
   );
+
 
 };
 
