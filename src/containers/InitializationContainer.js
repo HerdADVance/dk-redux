@@ -1,18 +1,19 @@
 import { connect } from 'react-redux';
 import Initialization from '../components/Initialization';
 import { createSlot } from '../actions/slot-actions';
-import { createLineup } from '../actions/lineup-actions';
+import { createLineups } from '../actions/lineup-actions';
 
-// const mapStateToProps = state => {
-//   return { 
-//   	lid: state.lineupIdGenerator,
-//   	sid: state.slotIdGenerator
-//    };
-// };
+const mapStateToProps = state => {
+  console.log(state);
+  return { 
+  	lid: state.lineupIdGenerator,
+  	sid: state.slotIdGenerator
+   };
+};
 
 const mapDispatchToProps = {
   createSlot,
-  createLineup
+  createLineups
 };
 
-export default connect(null, mapDispatchToProps)(Initialization);
+export default connect(mapStateToProps, mapDispatchToProps)(Initialization);

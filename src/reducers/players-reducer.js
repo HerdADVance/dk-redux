@@ -6,8 +6,6 @@ import { lineups as defaultLineups } from '../normalized-state';
 
 //import { addEntity, removeEntity } from './_utilities';
 
-console.log(defaultPlayers);
-
 const playersReducer = (players = defaultPlayers, action) => {
   // if (action.type === PLAYER_CREATE) {
   //   const { player, playerId } = action.payload;

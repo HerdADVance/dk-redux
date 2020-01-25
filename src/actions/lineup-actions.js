@@ -1,22 +1,37 @@
-export const LINEUP_CREATE = 'LINEUP_CREATE';
+export const LINEUPS_CREATE = 'LINEUPS_CREATE';
 //export const LINEUP_DELETE = 'LINEUP_DELETE';
 
 const defaultLineupData = {
   slots: [],
 };
 
-export const createLineup = lineupData => {
-  const lineupId = Date.now().toString();
-  const lineup = {
-    id: lineupId,
-    salary: 50000,
-    ...defaultLineupData,
-    ...lineupData,
-  };
+export const createLineups = (num, lid) => {
+
+  let lineupsToCreate = {};
+  let lineupsToCreateIds = []
+  
+  for(let i = 0; i < num; i++){
+    
+    let lineup = {}
+    lineup[lid] = {
+      id: lid,
+      salary: 50000,
+      slots: []
+    }
+
+    lineupsToCreate = Object.assign({}, lineupsToCreate, lineup);
+    lineupsToCreateIds.push(lid);
+
+    lid ++;
+  }
+
+  console.log(lineupsToCreate);
+
   return {
-    type: LINEUP_CREATE,
-    payload: { lineup, lineupId },
+    type: LINEUPS_CREATE,
+    payload: { lineupsToCreate, lineupsToCreateIds }
   };
+
 };
 
 // export const removeLineup = lineupId => {

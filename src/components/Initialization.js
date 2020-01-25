@@ -1,17 +1,23 @@
 import React, { Component } from "react";
 
-const Initialization = ({ createSlot, createLineup }) => {
+const Initialization = ({ lid, sid, createSlot, createLineups }) => {
   
   function handleClick(){
 
-  	for(var i=1; i<101; i++){
+  	// for(var i=0; i<100; i++){
   		
-  		createLineup()
+  	// 	createLineup(lid);
 
-  		for(var j=0; j<8; j++){
-  			//createSlot();
-  		}
-  	}
+  	// 	for(var j=0; j<8; j++){
+  	// 		//createSlot(lid, sid);
+   //      sid ++;
+  	// 	}
+
+   //    lid++;
+  	// }
+
+    createLineups(100, lid);
+
   }
 
 
