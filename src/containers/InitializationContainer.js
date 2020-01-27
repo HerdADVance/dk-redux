@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Initialization from '../components/Initialization';
-import { createSlot } from '../actions/slot-actions';
+import { createSlots } from '../actions/slot-actions';
 import { createLineups } from '../actions/lineup-actions';
 
 const mapStateToProps = state => {
@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = {
-  createSlot,
+  createSlots,
   createLineups
 };
 

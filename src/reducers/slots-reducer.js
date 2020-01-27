@@ -1,6 +1,6 @@
 import { slots as defaultSlots } from '../normalized-state';
 
-//import { CARD_CREATE, CARD_DELETE } from '../actions/card-actions';
+import { LINEUPS_CREATE } from '../actions/lineup-actions';
 
 //import { addEntity, removeEntity } from './_utilities';
 
@@ -9,6 +9,19 @@ const slotsReducer = (slots = defaultSlots, action) => {
   //   const { player, playerId } = action.payload;
   //   return addEntity(players, player, playerId);
   // }
+
+  if (action.type === LINEUPS_CREATE) {
+    
+    const { slotsToCreate, slotsToCreateIds } = action.payload;
+
+    const newEntities = {...slots.entities, ...slotsToCreate}
+    const newIds = [...slots.ids, ...slotsToCreateIds]
+    
+    return{
+    	entities: newEntities,
+    	ids: newIds 
+    }
+  }
 
   return slots;
 };

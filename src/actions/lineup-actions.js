@@ -1,3 +1,5 @@
+import slateInfo from '../data/slateInfo';
+
 export const LINEUPS_CREATE = 'LINEUPS_CREATE';
 //export const LINEUP_DELETE = 'LINEUP_DELETE';
 
@@ -8,24 +10,44 @@ const defaultLineupData = {
 export const createLineups = (num, lid, sid) => {
 
   let lineupsToCreate = {};
-  let lineupsToCreateIds = []
-  let slotsToCreate = []
+  let lineupsToCreateIds = [];
+
+  let slotsToCreate = {};
+  let slotsToCreateIds = [];
   
+  // Creating lineup
   for(let i = 0; i < num; i++){
     
     let lineup = {}
-    
-    let slotsForLineup = []
-    for(let j = 0; j < 8; j++){
+    let slotsForLineup = [];
+
+    // Creating slot
+    for(let j = 0; j < slateInfo.classic.CFB.roster.length; j++){
+
+      let slot = {}
+
+      slot[sid] = {
+        id: sid,
+        position: slateInfo.classic.CFB.roster[j].position,
+        accepts: slateInfo.classic.CFB.roster[j].accepts,
+        clicked: false,
+        players: []
+      }
+      
       slotsForLineup.push(sid);
+
+      slotsToCreate = Object.assign({}, slotsToCreate, slot);
+      slotsToCreateIds.push(sid);
+
       sid ++;
+
     }
 
     lineup[lid] = {
       id: lid,
       salary: 50000,
-      slots: []
-    }
+      slots: slotsForLineup
+    };
 
     lineupsToCreate = Object.assign({}, lineupsToCreate, lineup);
     lineupsToCreateIds.push(lid);
@@ -33,11 +55,9 @@ export const createLineups = (num, lid, sid) => {
     lid ++;
   }
 
-  console.log(lineupsToCreate);
-
   return {
     type: LINEUPS_CREATE,
-    payload: { lineupsToCreate, lineupsToCreateIds }
+    payload: { lineupsToCreate, lineupsToCreateIds, slotsToCreate, slotsToCreateIds }
   };
 
 };

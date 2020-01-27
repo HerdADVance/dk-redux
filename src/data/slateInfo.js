@@ -1,4 +1,4 @@
-{
+const slateInfo = {
 	"classic": {
 
 		"CFB":{
@@ -15,37 +15,37 @@
 			        "accepts": ["RB"],
 			        "clicked": false,
 			        "player": false
-			    }
+			    },
 			    {
 					"position": "RB",
 			        "accepts": ["RB"],
 			        "clicked": false,
 			        "player": false
-			    }
+			    },
 			    {
 					"position": "WR",
 			        "accepts": ["WR"],
 			        "clicked": false,
 			        "player": false
-			    }
+			    },
 			    {
 					"position": "WR",
 			        "accepts": ["WR"],
 			        "clicked": false,
 			        "player": false
-			    }
+			    },
 			    {
 					"position": "WR",
 			        "accepts": ["WR"],
 			        "clicked": false,
 			        "player": false
-			    }
+			    },
 			    {
 					"position": "FX",
 			        "accepts": ["RB", "WR"],
 			        "clicked": false,
 			        "player": false
-			    }
+			    },
 			    {
 					"position": "SF",
 			        "accepts": ["QB", "RB", "WR"],
@@ -58,3 +58,5 @@
 	}
 
 }
+
+export default slateInfo;

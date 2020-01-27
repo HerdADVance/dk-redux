@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const Initialization = ({ lid, sid, createSlot, createLineups }) => {
+const Initialization = ({ lid, sid, createSlots, createLineups }) => {
   
   function handleClick(){
 
@@ -16,8 +16,7 @@ const Initialization = ({ lid, sid, createSlot, createLineups }) => {
    //    lid++;
   	// }
 
-    createLineups(100, 1, 1);
-    createSlots(100, 1, 1);
+    createLineups(100, 2, 9);
 
   }
 
