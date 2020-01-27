@@ -4,16 +4,16 @@ import PlayerContainer from '../containers/PlayerContainer';
 
 const Slot = ({ slot = {}, lineupId }) => { // pass removeSlot here later
 
-  function handleClick(pid) {
+  function handleClick(sid) {
 
-    console.log("Player #" + pid + " clicked");
+    slotClick(sid);
 
   }
 
   return (
     <tr 
         position={slot.position}
-        onClick={() => handleClick(slot.player)}
+        onClick={() => handleClick(slot.id)}
     >
 
       <td>{slot.position}</td>

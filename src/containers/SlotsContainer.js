@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Slot from '../components/Slot';
-//import { removeSlot } from '../actions/slot-actions';
+import { slotClick } from '../actions/slot-actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -9,7 +9,11 @@ const mapStateToProps = (state, ownProps) => {
   };
 };
 
+const mapDispatchToProps = {
+	slotClick
+}
+
 export default connect(
   mapStateToProps,
-  //{ removeSlot },
+  mapDispatchToProps
 )(Slot);
