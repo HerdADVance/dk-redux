@@ -5,13 +5,13 @@ import React from 'react';
 
 import SlotsContainer from '../containers/SlotsContainer';
 
-const Lineup = ({ lineup = {} }) => {
+const Lineup = ({ lineup = {}, index }) => {
 
   return (
   	<table className="lineup">
   		<tbody>
   			<tr>
-  				<td colSpan="4">Lineup #1</td>
+  				<td colSpan="4">Lineup #{index}</td>
   			</tr>
   			{lineup.slots.map(slotId => (
   				<SlotsContainer key={slotId} slotId={slotId} lineupId={lineup.id} />

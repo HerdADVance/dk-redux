@@ -31,7 +31,7 @@ export const createLineups = (num, lid, sid) => {
         position: slateInfo.classic.CFB.roster[j].position,
         accepts: slateInfo.classic.CFB.roster[j].accepts,
         clicked: false,
-        players: []
+        player: false
       }
       
       slotsForLineup.push(sid);

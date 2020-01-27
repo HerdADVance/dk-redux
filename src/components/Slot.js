@@ -3,12 +3,27 @@ import React from 'react';
 import PlayerContainer from '../containers/PlayerContainer';
 
 const Slot = ({ slot = {}, lineupId }) => { // pass removeSlot here later
+
+  function handleClick(pid) {
+
+    console.log("Player #" + pid + " clicked");
+
+  }
+
   return (
-    <tr data-pos={slot.position}>
+    <tr 
+        position={slot.position}
+        onClick={() => handleClick(slot.player)}
+    >
+
       <td>{slot.position}</td>
-      {slot.players.map(playerId => (
-      	<PlayerContainer key={playerId} playerId={playerId} slotId={slot.id} />
-      ))}
+      
+      {slot.player? 
+            <PlayerContainer key={slot.player} playerId={slot.player} slotId={slot.id} />
+        :
+            <><td></td><td></td></>
+      }
+
       <td>+</td>
       {/*MoveSlotToListContainer slotId={slot.id} listId={listId} />*/}
     </tr>
