@@ -5,14 +5,22 @@ const defaultLineupData = {
   slots: [],
 };
 
-export const createLineups = (num, lid) => {
+export const createLineups = (num, lid, sid) => {
 
   let lineupsToCreate = {};
   let lineupsToCreateIds = []
+  let slotsToCreate = []
   
   for(let i = 0; i < num; i++){
     
     let lineup = {}
+    
+    let slotsForLineup = []
+    for(let j = 0; j < 8; j++){
+      slotsForLineup.push(sid);
+      sid ++;
+    }
+
     lineup[lid] = {
       id: lid,
       salary: 50000,

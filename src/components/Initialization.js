@@ -16,7 +16,8 @@ const Initialization = ({ lid, sid, createSlot, createLineups }) => {
    //    lid++;
   	// }
 
-    createLineups(100, lid);
+    createLineups(100, 1, 1);
+    createSlots(100, 1, 1);
 
   }
 
