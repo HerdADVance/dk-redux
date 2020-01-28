@@ -2,7 +2,7 @@ import React from 'react';
 //import MoveSlotToListContainer from '../containers/MoveSlotToListContainer';
 import PlayerContainer from '../containers/PlayerContainer';
 
-const Slot = ({ slot = {}, lineupId }) => { // pass removeSlot here later
+const Slot = ({ slot = {}, lineupId, slotClick }) => { // pass removeSlot here later
 
   function handleClick(sid) {
 

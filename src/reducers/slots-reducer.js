@@ -23,6 +23,12 @@ const slotsReducer = (slots = defaultSlots, action) => {
   if (action.type === SLOT_CLICK){
 
     const { slotId } = action.payload;
+    slots.entities[slotId].clicked = !slots.entities[slotId].clicked;
+
+    return {
+      entities: {...slots.entities, ...slots.entities[slotId]},
+      ids: slots.ids
+    }
 
   }
 

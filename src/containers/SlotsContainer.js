@@ -4,8 +4,7 @@ import { slotClick } from '../actions/slot-actions';
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    slot: state.slots.entities[ownProps.slotId],
-    playerrr: "ABC"
+    slot: state.slots.entities[ownProps.slotId]
   };
 };
 
