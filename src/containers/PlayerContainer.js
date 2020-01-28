@@ -5,9 +5,9 @@ import Player from '../components/Player';
 const mapStateToProps = (state, ownProps) => {
 
   if(ownProps.slotId){
-  	return { player: state.players.entities[ownProps.playerId], display: 'slot' };
+  	return { player: state.players.entities[ownProps.playerId], display: 'slot', };
   } else{
-  	return { player: state.players.entities[ownProps.playerId], display: 'playerList'}
+  	return { player: state.players.entities[ownProps.playerId], display: 'playerList', clickedPlayer: state.clickedPlayer}
   }
 };
 
