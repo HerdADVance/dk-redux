@@ -11,9 +11,11 @@ const Slot = ({ slot = {}, lineupId, slotClick }) => { // pass removeSlot here l
   }
 
   return (
+
     <tr 
-        position={slot.position}
-        onClick={() => handleClick(slot.id)}
+      onClick={() => handleClick(slot.id)} 
+      position={slot.position}
+      className={slot.clicked? 'clicked' : ''}
     >
 
       <td>{slot.position}</td>
@@ -26,7 +28,9 @@ const Slot = ({ slot = {}, lineupId, slotClick }) => { // pass removeSlot here l
 
       <td>+</td>
       {/*MoveSlotToListContainer slotId={slot.id} listId={listId} />*/}
+    
     </tr>
+
   );
 };
 

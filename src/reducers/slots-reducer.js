@@ -23,11 +23,31 @@ const slotsReducer = (slots = defaultSlots, action) => {
   if (action.type === SLOT_CLICK){
 
     const { slotId } = action.payload;
-    slots.entities[slotId].clicked = !slots.entities[slotId].clicked;
+
+    // const foundSlot = slots.entities[slotId];
+    // foundSlot.clicked = !foundSlot.clicked;
+
+    // const newEntities = {...slots.entities, ...foundSlot};
+    // const newIds = [...slots.ids];
+
+    // const newSlots = {
+    //   entities: newEntities,
+    //   ids: newIds
+    // };
+
+    // const newState = {...slots, ...newSlots};
+
+    // return newState;
 
     return {
-      entities: {...slots.entities, ...slots.entities[slotId]},
-      ids: slots.ids
+      ...slots, // copy state
+      entities: {
+        ...slots.entities, // copy houses
+        [slotId]: {  // update one specific house (using Computed Property syntax)
+          ...slots.entities[slotId],  // copy that specific house's properties
+          clicked: !slots.entities[slotId].clicked   // update its `points` property
+        }
+      }
     }
 
   }

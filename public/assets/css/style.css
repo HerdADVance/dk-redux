@@ -401,6 +401,9 @@ td.gameinfo{
 }
 
 /* INDIVIDUAL LINEUP PLAYER ROWS */
+.lineup tr.clicked{
+  background: dodgerblue;
+}
 .lineup tr td:first-child{
   width: 25px;
 }

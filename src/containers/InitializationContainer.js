@@ -3,7 +3,6 @@ import Initialization from '../components/Initialization';
 import { createLineups } from '../actions/lineup-actions';
 
 const mapStateToProps = state => {
-  console.log(state);
   return { 
   	lid: state.lineupIdGenerator,
   	sid: state.slotIdGenerator
