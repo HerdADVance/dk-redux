@@ -28,7 +28,7 @@ export const slots = {
 
 export const lineupIdGenerator = defaultState.lineupIdGenerator;
 export const slotIdGenerator = defaultState.slotIdGenerator;
-export const clickedPlayer = defaultState.clickedPlayer;
+export const ui = defaultState.ui;
 
 // let playerIds = [];
 // for(var i = 0; i < defaultState.players.length; i++){
@@ -56,6 +56,6 @@ export default{
   slots,
   lineupIdGenerator,
   slotIdGenerator,
-  clickedPlayer
+  ui
 };
 

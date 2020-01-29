@@ -1,7 +1,7 @@
 import { lineups as defaultLineups } from '../normalized-state';
 // access idGenerator here
 
-import { SLOT_CREATE} from '../actions/slot-actions';
+import { SLOT_CREATE } from '../actions/slot-actions';
 import { LINEUPS_CREATE, LINEUP_DELETE } from '../actions/lineup-actions';
 
 import { addEntity, removeEntity } from './_utilities';
