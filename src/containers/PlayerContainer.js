@@ -6,11 +6,37 @@ import { playerClick } from '../actions/ui-actions';
 const mapStateToProps = (state, ownProps) => {
 
   if(ownProps.slotId){
-  	return { player: state.players.entities[ownProps.playerId], display: 'slot', };
+  	return { 
+  		player: state.players.entities[ownProps.playerId], 
+  		display: 'slot'
+  	};
   } else{
-  	return { player: state.players.entities[ownProps.playerId], display: 'playerList', clickedPlayer: state.ui.clickedPlayer}
+  	return { 
+  		player: state.players.entities[ownProps.playerId], 
+  		display: 'playerList', 
+  		clickedPlayer: state.ui.clickedPlayer,
+  		slots: findPlayerInSlots(state.slots, state.players.entities[ownProps.playerId].id),
+  		numLineups: state.lineups.ids.length
+  	}
   }
 };
+
+function findPlayerInSlots(slots, pid){
+
+	let foundSlots = [];
+
+	for(let i = 0; i < slots.ids.length; i++){
+
+		let slotId = slots.ids[i];
+
+		if(slots.entities[slotId].player == pid ){
+			foundSlots.push(slotId);
+		}
+	}
+
+	console.log(foundSlots);
+	return foundSlots;
+}
 
 const mapDispatchToProps = {
   playerClick

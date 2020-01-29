@@ -3,7 +3,7 @@ import React, { Component } from "react";
 const Initialization = ({ lid, sid, createLineups }) => {
   
   function handleClick(){
-    createLineups(100, 2, 9);
+    createLineups(40, 2, 9);
   }
 
 
