@@ -1,5 +1,10 @@
 import React from 'react';
 
+import Slider, { Range } from 'rc-slider';
+//import PlayerSlider from './PlayerSlider';
+
+import 'rc-slider/assets/index.css';
+
 //import CardsContainer from '../containers/CardsContainer';
 //import CreateCardContainer from '../containers/CreateCardContainer';
 
@@ -32,7 +37,10 @@ const Player = ({
 
 			{player.id === clickedPlayer?
 				<tr>
-					<td colSpan="5">{player.Name} is in {slots.length} of {numLineups} lineups.</td>
+					<td colSpan="5">
+						<p>{player.Name} is in {slots.length} of {numLineups} lineups.</p>
+						<Slider min={0} max={numLineups} defaultValue={slots.length} />
+					</td>
 				</tr>
 			:
 				''
