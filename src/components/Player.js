@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Slider, { Range } from 'rc-slider';
 //import PlayerSlider from './PlayerSlider';
@@ -17,8 +17,14 @@ const Player = ({
 	playerClick 
 }) => {
 
+	const [sliderValue, setSliderValue] = useState(null);
+
 	function handleClick(pid) {
 		playerClick(pid);
+	}
+
+	function handleSliderChange(a){
+		console.log(a);
 	}
 
 	if(display !== 'slot'){
@@ -39,7 +45,14 @@ const Player = ({
 				<tr>
 					<td colSpan="5">
 						<p>{player.Name} is in {slots.length} of {numLineups} lineups.</p>
-						<Slider min={0} max={numLineups} defaultValue={slots.length} />
+						<Slider 
+							min={0} 
+							max={numLineups} 
+							defaultValue={slots.length}
+							value={sliderValue}
+							onChange={(e) => handleSliderChange()} 
+						/>
+						{sliderValue}
 					</td>
 				</tr>
 			:

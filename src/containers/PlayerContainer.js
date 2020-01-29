@@ -34,7 +34,6 @@ function findPlayerInSlots(slots, pid){
 		}
 	}
 
-	console.log(foundSlots);
 	return foundSlots;
 }
 
