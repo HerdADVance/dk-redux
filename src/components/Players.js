@@ -1,13 +1,26 @@
 import React from 'react';
 import PlayerContainer from '../containers/PlayerContainer';
 
+import slateInfo from '../data/slateInfo';
+
 const Players = ({ players = [] }) => {
+
+  function handlePositionClick(pos){
+  	console.log(pos);
+  }
 
   return (
     <div className="list">
 		<div>
 			<ul className="sort-players sort-positions clickable">
-
+				{slateInfo.classic.CFB.positions.map(position => (
+					<li 
+						key={position}
+						onClick={() => handlePositionClick(position)}
+					>
+					{position}
+					</li>
+				))}
 			</ul>
 		</div>
 

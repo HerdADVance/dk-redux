@@ -52,7 +52,8 @@ const slateInfo = {
 			        "clicked": false,
 			        "player": false
 			    }
-			]
+			],
+			positions: ["QB", "RB", "WR", "FX", "ALL"]
 		}
 
 	}

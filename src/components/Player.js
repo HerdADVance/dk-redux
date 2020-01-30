@@ -17,17 +17,20 @@ const Player = ({
 	playerClick 
 }) => {
 
-	const [sliderValue, setSliderValue] = useState(null);
+	if(display !== 'slot'){ // This will handle the main Players table. Else handles simply outputting name and salary to slot
 
-	function handleClick(pid) {
-		playerClick(pid);
-	}
+		const [sliderValue, setSliderValue] = useState(slots.length);
 
-	function handleSliderChange(a){
-		console.log(a);
-	}
+		function handleClick(pid) {
+			setSliderValue(slots.length);
+			playerClick(pid);
+		}
 
-	if(display !== 'slot'){
+		function handleSliderChange(value){
+			setSliderValue(value);
+		}
+
+	
 		return (
 			<>
 			<tr 
@@ -50,7 +53,7 @@ const Player = ({
 							max={numLineups} 
 							defaultValue={slots.length}
 							value={sliderValue}
-							onChange={(e) => handleSliderChange()} 
+							onChange={handleSliderChange} 
 						/>
 						{sliderValue}
 					</td>
