@@ -32,6 +32,7 @@ const Players = ({ players = [] }) => {
 		<div className="players-wrap">
 			<table className="players">
 				<tbody>
+					{/* filter here */}
 					{players.map(playerId => (
 		    			<PlayerContainer key={playerId} playerId={playerId} />
 		  			))}

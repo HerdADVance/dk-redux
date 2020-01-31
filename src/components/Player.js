@@ -17,9 +17,13 @@ const Player = ({
 	playerClick 
 }) => {
 
-	if(display !== 'slot'){ // This will handle the main Players table. Else handles simply outputting name and salary to slot
+	let slotLength = 0;
+	if(slots) slotLength = slots.length;
 
-		const [sliderValue, setSliderValue] = useState(slots.length);
+
+	const [sliderValue, setSliderValue] = useState(slotLength);
+
+	if(display !== 'slot'){ // This will handle the main Players table. Else handles simply outputting name and salary to slot
 
 		function handleClick(pid) {
 			setSliderValue(slots.length);
