@@ -5,7 +5,9 @@
   "lineupIdGenerator": 2,
   "slotIdGenerator": 1,
   "ui": {
-    "clickedPlayer": 14039258
+    "clickedPlayer": 14039258,
+    "selectedPosition": "ALL",
+    "selectedTeam": "ALL"
   },
   "players": [
     {

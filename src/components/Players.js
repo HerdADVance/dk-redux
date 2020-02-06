@@ -9,6 +9,12 @@ const Players = ({ players = [] }) => {
   	console.log(pos);
   }
 
+  // let filteredPlayers = players.filter( function (player) {
+  //   return player.Position === 'RB'
+  // });
+
+  // console.log(filteredPlayers);
+
   return (
     <div className="list">
 		<div>
