@@ -10,16 +10,42 @@ const Players = ({
 	positionClick 
 }) => {
 
+  // Functions
   function handlePositionClick(pos){
   	positionClick(pos);
   }
 
-  // GONNA DO IT HERE
-  let filteredPlayers = players.filter( function (player) {
-    return playersEntities[player].Position === clickedPosition
-  });
+  function positionFilter(position, accepted){
+  	for(let i = 0; i < accepted.length; i++){
+  		if(accepted[i] == position) return true;
+  	}
+  	return false;
+  }
 
-  console.log(filteredPlayers);
+  // Begin Filter
+  let filteredPlayers = players;
+
+  // Filter by Position
+  switch(clickedPosition){
+  	case 'ALL':
+  		break;
+
+  	default:
+  		let foundAcceptedPosition = slateInfo.classic.CFB.roster.filter(function (spot) {
+  			return spot.position === clickedPosition
+  		});
+
+  		let acceptedPositions = foundAcceptedPosition[0].accepts;
+  		
+  		filteredPlayers = players.filter( function (player) {
+  			let filterResult = positionFilter(playersEntities[player].Position, acceptedPositions);
+  			return filterResult === true;
+		});
+
+		break;
+  }
+
+  // Filter by Team
 
   return (
     <div className="list">
