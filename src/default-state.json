@@ -6,7 +6,7 @@
   "slotIdGenerator": 1,
   "ui": {
     "clickedPlayer": 14039258,
-    "selectedPosition": "ALL",
+    "clickedPosition": "ALL",
     "selectedTeam": "ALL"
   },
   "players": [

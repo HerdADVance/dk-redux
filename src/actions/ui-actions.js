@@ -1,5 +1,5 @@
 export const PLAYER_CLICK = 'PLAYER_CLICK';
-// export const SLOT_DELETE = 'SLOT_DELETE';
+export const POSITION_CLICK = 'POSITION_CLICK';
 // export const SLOT_MOVE = 'SLOT_MOVE';
 
 
@@ -14,5 +14,12 @@ export const playerClick = (playerId) => {
   return {
     type: PLAYER_CLICK,
     payload: { playerId }
+  }
+};
+
+export const positionClick = (position) => {
+  return {
+    type: POSITION_CLICK,
+    payload: { position }
   }
 };

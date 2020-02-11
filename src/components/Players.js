@@ -3,17 +3,23 @@ import PlayerContainer from '../containers/PlayerContainer';
 
 import slateInfo from '../data/slateInfo';
 
-const Players = ({ players = [] }) => {
+const Players = ({ 
+	players = [], 
+	playersEntities, 
+	clickedPosition, 
+	positionClick 
+}) => {
 
   function handlePositionClick(pos){
-  	console.log(pos);
+  	positionClick(pos);
   }
 
-  // let filteredPlayers = players.filter( function (player) {
-  //   return player.Position === 'RB'
-  // });
+  // GONNA DO IT HERE
+  let filteredPlayers = players.filter( function (player) {
+    return playersEntities[player].Position === clickedPosition
+  });
 
-  // console.log(filteredPlayers);
+  console.log(filteredPlayers);
 
   return (
     <div className="list">
@@ -39,7 +45,7 @@ const Players = ({ players = [] }) => {
 			<table className="players">
 				<tbody>
 					{/* filter here */}
-					{players.map(playerId => (
+					{filteredPlayers.map(playerId => (
 		    			<PlayerContainer key={playerId} playerId={playerId} />
 		  			))}
 		  		</tbody>

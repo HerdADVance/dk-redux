@@ -1,12 +1,18 @@
 import { connect } from 'react-redux';
 import Players from '../components/Players';
 
-const getFilteredPlayers = state => {
-	return state.players.ids
-}
+import { positionClick } from '../actions/ui-actions';
 
 const mapStateToProps = state => {
-  return { players: state.players.ids };
+  return { 
+  	players: state.players.ids, 
+  	playersEntities: state.players.entities,
+  	clickedPosition: state.ui.clickedPosition,
+  };
 };
 
-export default connect(mapStateToProps)(Players);
+const mapDispatchToProps = {
+  positionClick
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Players);
