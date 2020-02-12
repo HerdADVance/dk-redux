@@ -6,10 +6,9 @@ import InitializationContainer from './../containers/InitializationContainer';
 import PlayersContainer from './../containers/PlayersContainer';
 import LineupsContainer from './../containers/LineupsContainer';
 
+
 const Application = () => {
   
-  //const themeHook = useState("dodgerblue")
-
   return (
     <main className="application">
     	<InitializationContainer />

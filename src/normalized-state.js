@@ -1,5 +1,38 @@
+console.log("normalizin");
+
 import { schema, normalize } from 'normalizr';
 import defaultState from './default-state';
+
+import forEach from 'lodash/forEach';
+import orderBy from 'lodash/orderBy';
+import uniqBy from 'lodash/uniqBy';
+
+// Creating games based on initial players list
+let sortedGames = [];
+
+forEach(defaultState.players, function(player){
+  console.log(player);
+  let game = {};
+  let info = player['Game Info'];
+  game['away'] = info.substr(0, info.indexOf('@'));
+
+  info = info.substring(info.indexOf("@") + 1);
+  game['home'] = info.substr(0, info.indexOf(' '));
+
+  info = info.substring(info.indexOf(" ") + 1);
+  info = info.substring(info.indexOf(" ") + 1);
+  info = info.substring(0, info.indexOf(' '));
+  info = info.slice(0, -2); 
+  game['time'] = info
+
+  sortedGames.push(game);
+});
+
+let games = uniqBy(sortedGames, 'away');
+games = orderBy(games, ['time'],['asc'])
+
+console.log(games);
+
 
 const player = new schema.Entity('players');
 const slot = new schema.Entity('slots');
