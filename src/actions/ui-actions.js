@@ -1,6 +1,6 @@
 export const PLAYER_CLICK = 'PLAYER_CLICK';
 export const POSITION_CLICK = 'POSITION_CLICK';
-// export const SLOT_MOVE = 'SLOT_MOVE';
+export const TEAM_CLICK = 'TEAM_CLICK';
 
 
 // const defaultPlayerData = {
@@ -21,5 +21,12 @@ export const positionClick = (position) => {
   return {
     type: POSITION_CLICK,
     payload: { position }
+  }
+};
+
+export const teamClick = (team) => {
+  return {
+    type: TEAM_CLICK,
+    payload: { team }
   }
 };

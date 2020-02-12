@@ -3,6 +3,8 @@ console.log("normalizin");
 import { schema, normalize } from 'normalizr';
 import defaultState from './default-state';
 
+import playerData from './data/college-main-players';
+
 import forEach from 'lodash/forEach';
 import orderBy from 'lodash/orderBy';
 import uniqBy from 'lodash/uniqBy';
@@ -10,8 +12,7 @@ import uniqBy from 'lodash/uniqBy';
 // Creating games based on initial players list
 let sortedGames = [];
 
-forEach(defaultState.players, function(player){
-  console.log(player);
+forEach(playerData.players, function(player){
   let game = {};
   let info = player['Game Info'];
   game['away'] = info.substr(0, info.indexOf('@'));
@@ -28,10 +29,8 @@ forEach(defaultState.players, function(player){
   sortedGames.push(game);
 });
 
-let games = uniqBy(sortedGames, 'away');
-games = orderBy(games, ['time'],['asc'])
-
-console.log(games);
+sortedGames = uniqBy(sortedGames, 'away');
+sortedGames = orderBy(sortedGames, ['time'],['asc'])
 
 
 const player = new schema.Entity('players');
@@ -40,7 +39,8 @@ const lineup = new schema.Entity('lineups', {
 	slots: [slot]
 });
 
-const normalizedPlayers = normalize(defaultState.players, [player]);
+
+const normalizedPlayers = normalize(playerData.players, [player]);
 const normalizedLineups = normalize(defaultState.lineups, [lineup]);
 
 
@@ -62,26 +62,7 @@ export const slots = {
 export const lineupIdGenerator = defaultState.lineupIdGenerator;
 export const slotIdGenerator = defaultState.slotIdGenerator;
 export const ui = defaultState.ui;
-
-// let playerIds = [];
-// for(var i = 0; i < defaultState.players.length; i++){
-// 	playerIds.push(defaultState.players[i].ID);
-// }
-
-// export const lineups = {
-//   entities: defaultState.lineups,
-//   ids: [1]
-// };
-
-// export const players = {
-//   entities: defaultState.players,
-//   ids: playerIds
-// };
-
-// export const slots = {
-//   entities: defaultState.slots,
-//   ids: [1,2,3,4,5,6,7,8]
-// };
+export const games = sortedGames;
 
 export default{
   players,
@@ -89,6 +70,7 @@ export default{
   slots,
   lineupIdGenerator,
   slotIdGenerator,
-  ui
+  ui,
+  games
 };
 

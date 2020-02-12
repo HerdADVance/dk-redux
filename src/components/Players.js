@@ -5,14 +5,21 @@ import slateInfo from '../data/slateInfo';
 
 const Players = ({ 
 	players = [], 
-	playersEntities, 
-	clickedPosition, 
-	positionClick 
+	playersEntities,
+	games,
+	clickedPosition,
+	clickedTeam, 
+	positionClick,
+	teamClick 
 }) => {
 
   // Functions
   function handlePositionClick(pos){
   	positionClick(pos);
+  }
+
+  function handleTeamClick(team){
+  	teamClick(pos);
   }
 
   function positionFilter(position, accepted){
@@ -64,6 +71,14 @@ const Players = ({
 
 		<div>
 			<ul className="sort-players sort-games clickable">
+				{games.map(game => (
+					<li 
+						key={game}
+						onClick={() => handleGameClick(game)}
+					>
+					{game}
+					</li>
+				))}
 			</ul>
 		</div>
 
