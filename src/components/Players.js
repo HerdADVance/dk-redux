@@ -3,10 +3,12 @@ import PlayerContainer from '../containers/PlayerContainer';
 
 import slateInfo from '../data/slateInfo';
 
+import forEach from 'lodash/forEach';
+
 const Players = ({ 
 	players = [], 
 	playersEntities,
-	games,
+	teams,
 	clickedPosition,
 	clickedTeam, 
 	positionClick,
@@ -19,7 +21,7 @@ const Players = ({
   }
 
   function handleTeamClick(team){
-  	teamClick(pos);
+  	teamClick(team);
   }
 
   function positionFilter(position, accepted){
@@ -32,7 +34,19 @@ const Players = ({
   // Begin Filter
   let filteredPlayers = players;
 
-  // Filter by Position
+  // let foundAcceptedPosition = slateInfo.classic.CFB.roster.filter(function (spot) {
+  // 	return spot.position === clickedPosition
+  // });
+  // let acceptedPositions = foundAcceptedPosition[0].accepts;
+
+  // var filtered_ids = _.filter(collections, function(p){
+  //   return _.includes([1,3,4], p.id);
+  // });
+  
+  // .at(ids)
+  // .value();
+
+  //Filter by Position
   switch(clickedPosition){
   	case 'ALL':
   		break;
@@ -46,7 +60,7 @@ const Players = ({
   		
   		filteredPlayers = players.filter( function (player) {
   			let filterResult = positionFilter(playersEntities[player].Position, acceptedPositions);
-  			return filterResult === true;
+  			return filterResult === true && playersEntities[player].TeamAbbrev === clickedTeam;
 		});
 
 		break;
@@ -71,12 +85,12 @@ const Players = ({
 
 		<div>
 			<ul className="sort-players sort-games clickable">
-				{games.map(game => (
+				{teams.map(team => (
 					<li 
-						key={game}
-						onClick={() => handleGameClick(game)}
+						key={team}
+						onClick={() => handleTeamClick(team)}
 					>
-					{game}
+					{team}
 					</li>
 				))}
 			</ul>

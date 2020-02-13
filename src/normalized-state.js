@@ -32,6 +32,14 @@ forEach(playerData.players, function(player){
 sortedGames = uniqBy(sortedGames, 'away');
 sortedGames = orderBy(sortedGames, ['time'],['asc'])
 
+console.log(sortedGames);
+
+let sortedTeams = []
+forEach(sortedGames, function(game){
+  sortedTeams.push(game.away)
+  sortedTeams.push(game.home)
+})
+sortedTeams.push("ALL");
 
 const player = new schema.Entity('players');
 const slot = new schema.Entity('slots');
@@ -62,7 +70,7 @@ export const slots = {
 export const lineupIdGenerator = defaultState.lineupIdGenerator;
 export const slotIdGenerator = defaultState.slotIdGenerator;
 export const ui = defaultState.ui;
-export const games = sortedGames;
+export const teams = sortedTeams;
 
 export default{
   players,
@@ -71,6 +79,6 @@ export default{
   lineupIdGenerator,
   slotIdGenerator,
   ui,
-  games
+  teams
 };
 

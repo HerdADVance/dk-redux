@@ -4,7 +4,7 @@ import players from './players-reducer';
 import lineups from './lineups-reducer';
 import slots from './slots-reducer';
 import ui from './ui-reducer';
-import games from './games-reducer';
+import teams from './teams-reducer';
 // import lineupIdGenerator from './lineups-generator-reducer';
 // import slotIdGenerator from './slots-generator-reducer';
 
@@ -13,5 +13,5 @@ export default combineReducers({
   lineups,
   slots,
   ui,
-  games
+  teams
 });

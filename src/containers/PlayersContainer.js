@@ -7,7 +7,7 @@ const mapStateToProps = state => {
   return { 
   	players: state.players.ids, 
   	playersEntities: state.players.entities,
-  	games: state.games,
+  	teams: state.teams,
   	clickedPosition: state.ui.clickedPosition,
   	clickedTeam: state.ui.clickedTeam
   };
