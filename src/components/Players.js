@@ -4,6 +4,7 @@ import PlayerContainer from '../containers/PlayerContainer';
 import slateInfo from '../data/slateInfo';
 
 import forEach from 'lodash/forEach';
+import includes from 'lodash/includes';
 
 const Players = ({ 
 	players = [], 
@@ -15,58 +16,63 @@ const Players = ({
 	teamClick 
 }) => {
 
-  // Functions
-  function handlePositionClick(pos){
-  	positionClick(pos);
-  }
+	// Functions
+	function handlePositionClick(pos){
+		positionClick(pos);
+	}
 
-  function handleTeamClick(team){
-  	teamClick(team);
-  }
+	function handleTeamClick(team){
+		teamClick(team);
+	}
 
-  function positionFilter(position, accepted){
-  	for(let i = 0; i < accepted.length; i++){
-  		if(accepted[i] == position) return true;
-  	}
-  	return false;
-  }
+	function positionFilter(position, accepted){
+		for(let i = 0; i < accepted.length; i++){
+			if(accepted[i] == position) return true;
+		}
+		return false;
+	}
 
-  // Begin Filter
-  let filteredPlayers = players;
+	// Begin Filter
+	let filteredPlayers = players;
+	let filteredPositions = [];
+	let filteredTeams = [];
 
-  // let foundAcceptedPosition = slateInfo.classic.CFB.roster.filter(function (spot) {
-  // 	return spot.position === clickedPosition
-  // });
-  // let acceptedPositions = foundAcceptedPosition[0].accepts;
+	// Filter by Position
+	switch(clickedPosition){
+		case 'ALL':
+			filteredPositions = slateInfo.classic.CFB.positions
+			break;
 
-  // var filtered_ids = _.filter(collections, function(p){
-  //   return _.includes([1,3,4], p.id);
-  // });
-  
-  // .at(ids)
-  // .value();
+		default:
+			let foundAcceptedPosition = slateInfo.classic.CFB.roster.filter(function (spot) {
+				return spot.position === clickedPosition
+			});
 
-  //Filter by Position
-  switch(clickedPosition){
-  	case 'ALL':
-  		break;
-
-  	default:
-  		let foundAcceptedPosition = slateInfo.classic.CFB.roster.filter(function (spot) {
-  			return spot.position === clickedPosition
-  		});
-
-  		let acceptedPositions = foundAcceptedPosition[0].accepts;
-  		
-  		filteredPlayers = players.filter( function (player) {
-  			let filterResult = positionFilter(playersEntities[player].Position, acceptedPositions);
-  			return filterResult === true && playersEntities[player].TeamAbbrev === clickedTeam;
-		});
-
+			filteredPositions = foundAcceptedPosition[0].accepts;
 		break;
-  }
+	}
 
-  // Filter by Team
+	// Filter by Team
+	switch(clickedTeam){
+		case 'ALL':
+			filteredTeams = teams;
+			break
+
+		default:
+			filteredTeams.push(clickedTeam);
+			break;
+	}
+
+	// Using previous filters for final filter
+	filteredPlayers = filteredPlayers.filter( function (player) {
+
+		let entity = playersEntities[player];
+
+		let matchesPosition = includes(filteredPositions, entity.Position);
+		let matchesTeam = includes(filteredTeams, entity.TeamAbbrev);
+
+		return matchesPosition && matchesTeam;
+	});
 
   return (
     <div className="list">
