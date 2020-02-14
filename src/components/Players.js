@@ -3,7 +3,6 @@ import PlayerContainer from '../containers/PlayerContainer';
 
 import slateInfo from '../data/slateInfo';
 
-import forEach from 'lodash/forEach';
 import includes from 'lodash/includes';
 
 const Players = ({ 
@@ -80,6 +79,7 @@ const Players = ({
 			<ul className="sort-players sort-positions clickable">
 				{slateInfo.classic.CFB.positions.map(position => (
 					<li 
+						class={position === clickedPosition? 'selected' : ''}
 						key={position}
 						onClick={() => handlePositionClick(position)}
 					>
@@ -93,6 +93,7 @@ const Players = ({
 			<ul className="sort-players sort-games clickable">
 				{teams.map(team => (
 					<li 
+						class={team === clickedTeam? 'selected' : ''}
 						key={team}
 						onClick={() => handleTeamClick(team)}
 					>
