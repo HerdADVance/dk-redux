@@ -59,7 +59,7 @@ const Player = ({
 							value={sliderValue}
 							onChange={handleSliderChange} 
 						/>
-						{sliderValue}
+						<button>Add {player.Name} to {sliderValue - slots.length} lineups</button>
 					</td>
 				</tr>
 			:
