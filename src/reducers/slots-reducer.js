@@ -4,6 +4,8 @@ import { LINEUPS_CREATE } from '../actions/lineup-actions';
 import { SLOT_CLICK } from '../actions/slot-actions';
 import { ADD_PLAYER_TO_SLOTS } from '../actions/slot-actions';
 
+import forEach from 'lodash/forEach';
+
 //import { addEntity, removeEntity } from './_utilities';
 
 const slotsReducer = (slots = defaultSlots, action) => {
@@ -42,7 +44,11 @@ const slotsReducer = (slots = defaultSlots, action) => {
 
     const { pid, num } = action.payload;
 
-    console.log(pid, num);
+    forEach(slots.entities, function(slot){
+      if(slot.player === pid){
+        console.log(slot);
+      }
+    });
 
     // return {
     //   ...slots,

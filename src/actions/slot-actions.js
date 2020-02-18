@@ -20,7 +20,7 @@ export const slotClick = (slotId) => {
   }
 };
 
-// do logic here
+
 export const addPlayerToSlots = (pid, num) => {
   return {
     type: ADD_PLAYER_TO_SLOTS,
