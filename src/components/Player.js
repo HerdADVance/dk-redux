@@ -14,7 +14,8 @@ const Player = ({
 	clickedPlayer, 
 	slots, 
 	numLineups, 
-	playerClick 
+	playerClick,
+	addPlayerToSlots
 }) => {
 
 	let slotLength = 0;
@@ -25,15 +26,14 @@ const Player = ({
 
 	if(display !== 'slot'){ // This will handle the main Players table. Else handles simply outputting name and salary to slot
 
-		
-
 		function handlePlayerClick(pid) {
 			setSliderValue(slots.length);
 			playerClick(pid);
 		}
 
-		function handlePlayerSliderButtonClick(val){
-			console.log(val);
+		function handlePlayerSliderButtonClick(pid, num){
+			console.log(pid, num);
+			addPlayerToSlots(pid, num);
 		}
 
 		function handleSliderChange(value){
@@ -66,7 +66,7 @@ const Player = ({
 							onChange={handleSliderChange} 
 						/>
 						<button
-							onClick={() => handlePlayerSliderButtonClick(sliderValue - slots.length)}
+							onClick={() => handlePlayerSliderButtonClick(player.id, sliderValue - slots.length)}
 						>
 							Add {player.Name} to {sliderValue - slots.length} lineups
 						</button>

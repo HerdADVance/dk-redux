@@ -2,6 +2,7 @@ import { slots as defaultSlots } from '../normalized-state';
 
 import { LINEUPS_CREATE } from '../actions/lineup-actions';
 import { SLOT_CLICK } from '../actions/slot-actions';
+import { ADD_PLAYER_TO_SLOTS } from '../actions/slot-actions';
 
 //import { addEntity, removeEntity } from './_utilities';
 
@@ -34,6 +35,25 @@ const slotsReducer = (slots = defaultSlots, action) => {
         }
       }
     }
+
+  }
+
+  if (action.type === ADD_PLAYER_TO_SLOTS){
+
+    const { pid, num } = action.payload;
+
+    console.log(pid, num);
+
+    // return {
+    //   ...slots,
+    //   entities: {
+    //     ...slots.entities,
+    //     [slotId]: {
+    //       ...slots.entities[slotId],
+    //       clicked: !slots.entities[slotId].clicked
+    //     }
+    //   }
+    // }
 
   }
 

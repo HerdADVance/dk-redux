@@ -1,7 +1,7 @@
 // export const PLAYER_CLICK = 'PLAYER_CLICK';
 // // export const SLOT_DELETE = 'SLOT_DELETE';
 // // export const SLOT_MOVE = 'SLOT_MOVE';
-
+//export const ADD_PLAYER_TO_SLOTS = 'ADD_PLAYER_TO_SLOTS';
 
 // // const defaultPlayerData = {
 // //   position: '',

@@ -3,13 +3,14 @@ import slateInfo from '../data/slateInfo';
 export const SLOT_CLICK = 'SLOT_CLICK';
 // export const SLOT_DELETE = 'SLOT_DELETE';
 // export const SLOT_MOVE = 'SLOT_MOVE';
+export const ADD_PLAYER_TO_SLOTS = 'ADD_PLAYER_TO_SLOTS';
 
 
 const defaultSlotData = {
   position: '',
   accepts: [],
   clicked: false,
-  players: []
+  player: false
 };
 
 export const slotClick = (slotId) => {
@@ -18,6 +19,15 @@ export const slotClick = (slotId) => {
     payload: { slotId }
   }
 };
+
+// do logic here
+export const addPlayerToSlots = (pid, num) => {
+  return {
+    type: ADD_PLAYER_TO_SLOTS,
+    payload: { pid, num }
+  }
+};
+
 
 // export const removeSlot = (slotId, listId) => {
 //   return {

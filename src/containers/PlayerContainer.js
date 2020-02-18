@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import Player from '../components/Player';
 import { playerClick } from '../actions/ui-actions';
-//import { removePlayer } from '../actions/player-actions';
+import { addPlayerToSlots } from '../actions/slot-actions';
 
 const mapStateToProps = (state, ownProps) => {
 
@@ -38,7 +38,8 @@ function findPlayerInSlots(slots, pid){
 }
 
 const mapDispatchToProps = {
-  playerClick
+  playerClick,
+  addPlayerToSlots
 };
 
 export default connect(
