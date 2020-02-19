@@ -31,9 +31,9 @@ const Player = ({
 			playerClick(pid);
 		}
 
-		function handlePlayerSliderButtonClick(pid, num){
-			console.log(pid, num);
-			addPlayerToSlots(pid, num);
+		function handlePlayerSliderButtonClick(player, num){
+			console.log(player, num);
+			addPlayerToSlots(player, num);
 		}
 
 		function handleSliderChange(value){
@@ -66,7 +66,7 @@ const Player = ({
 							onChange={handleSliderChange} 
 						/>
 						<button
-							onClick={() => handlePlayerSliderButtonClick(player.id, sliderValue - slots.length)}
+							onClick={() => handlePlayerSliderButtonClick(player, sliderValue - slots.length)}
 						>
 							Add {player.Name} to {sliderValue - slots.length} lineups
 						</button>

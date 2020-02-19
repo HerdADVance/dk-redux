@@ -21,10 +21,10 @@ export const slotClick = (slotId) => {
 };
 
 
-export const addPlayerToSlots = (pid, num) => {
+export const addPlayerToSlots = (player, num) => {
   return {
     type: ADD_PLAYER_TO_SLOTS,
-    payload: { pid, num }
+    payload: { player, num }
   }
 };
 

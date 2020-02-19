@@ -4,7 +4,11 @@ import { LINEUPS_CREATE } from '../actions/lineup-actions';
 import { SLOT_CLICK } from '../actions/slot-actions';
 import { ADD_PLAYER_TO_SLOTS } from '../actions/slot-actions';
 
+import slateInfo from '../data/slateInfo';
+
 import forEach from 'lodash/forEach';
+import includes from 'lodash/includes';
+import find from 'lodash/find';
 
 //import { addEntity, removeEntity } from './_utilities';
 
@@ -42,13 +46,21 @@ const slotsReducer = (slots = defaultSlots, action) => {
 
   if (action.type === ADD_PLAYER_TO_SLOTS){
 
-    const { pid, num } = action.payload;
+    const { player, num } = action.payload;
 
+    
+    let playerPosition = player.Position; 
+    
+    // Let's try de-flattening the data here. Then reflattening after doing logic.
+
+    let acceptingSlots = [];
     forEach(slots.entities, function(slot){
-      if(slot.player === pid){
-        console.log(slot);
-      }
+      if(includes(slot.accepts, playerPosition)) acceptingSlots.push(slot);
     });
+
+    console.log(acceptingSlots);
+
+
 
     // return {
     //   ...slots,
